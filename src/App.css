@@ -36,3 +36,34 @@ body {
   font-size: 12px;
   font-weight: 500;
 }
+
+.form-container {
+  margin: 50px auto;
+  width: 90%;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+form input {
+  border-radius: 5px;
+  font-family: "Karla", sans-serif;
+  border: 1px solid #d5d4d8;
+  text-indent: 5px;
+}
+
+.submit-btn {
+  padding: 8px 20px;
+  background: linear-gradient(90deg, #672280, #a626d3);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  grid-column: 1/-1;
+  font-family: "Karla", sans-serif;
+  cursor: pointer;
+}
