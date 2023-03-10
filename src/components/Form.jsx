@@ -1,13 +1,23 @@
+import memesData from "./memesData";
+
 export default function Form() {
+  function showUrl() {
+    const memesArray = memesData.data.memes
+    const randomImage =
+      memesArray[
+        Math.floor(Math.random() * memesArray.length)
+      ];
+    console.log(randomImage.url);
+  }
   return (
     <div className="form-container">
-      <form action="">
+      <div className="form">
         <input type="text" placeholder="Top text" />
         <input type="text" placeholder="Bottom text" />
-        <button type="submit" className="submit-btn">
+        <button className="submit-btn" onClick={showUrl}>
           Get a new meme image 🖼
         </button>
-      </form>
+      </div>
     </div>
   );
 }

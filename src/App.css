@@ -42,14 +42,14 @@ body {
   width: 90%;
 }
 
-form {
+.form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 20px;
 }
 
-form input {
+.form input {
   border-radius: 5px;
   font-family: "Karla", sans-serif;
   border: 1px solid #d5d4d8;
