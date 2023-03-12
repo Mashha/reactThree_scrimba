@@ -67,3 +67,8 @@ body {
   font-family: "Karla", sans-serif;
   cursor: pointer;
 }
+
+.image {
+  display: flex;
+  justify-content: center;
+}
