@@ -21,12 +21,37 @@ export default function Form() {
       randomImage: randomImage.url,
     }));
   }
+
+  console.log(meme);
+
+  function eventHandler(e) {
+    const { name, value } = e.target;
+    setMemeImage((prevData) => {
+      return {
+        ...prevData,
+        [name]: value,
+      };
+    });
+  }
+
   return (
     <>
       <div className="form-container">
         <div className="form">
-          <input type="text" placeholder="Top text" />
-          <input type="text" placeholder="Bottom text" />
+          <input
+            type="text"
+            placeholder="Top text"
+            name="topText"
+            value={meme.topText}
+            onChange={eventHandler}
+          />
+          <input
+            type="text"
+            placeholder="Bottom text"
+            name="bottomText"
+            value={meme.bottomText}
+            onChange={eventHandler}
+          />
           <button className="submit-btn" onClick={getMemeImage}>
             Get a new meme image 🖼
           </button>
@@ -35,6 +60,8 @@ export default function Form() {
 
       <div className="image">
         <img src={meme.randomImage} alt="meme image" className="meme-image" />
+        <h2 className="meme-text top">{meme.topText}</h2>
+        <h2 className="meme-text bottom">{meme.bottomText}</h2>
       </div>
     </>
   );
